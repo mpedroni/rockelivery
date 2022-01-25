@@ -10,8 +10,7 @@ config :rockelivery, Rockelivery.Repo,
   password: "postgres",
   hostname: "localhost",
   database: "rockelivery_test#{System.get_env("MIX_TEST_PARTITION")}",
-  pool: Ecto.Adapters.SQL.Sandbox,
-  pool_size: 10
+  pool: Ecto.Adapters.SQL.Sandbox
 
 config :rockelivery, Rockelivery.Users.Create, via_cep_adapter: Rockelivery.ViaCep.ClientMock
 
